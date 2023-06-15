@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Select All This </h1>
+
+
+    <select id="ArrayDropdown"></select>
+    <button onclick="remove()">Click to Remove</button>
+    <input type="text" onclick="push()" placeholder="home">
+    <button onclick="Add()">Click to Add</button>
+    <script>
+
+        var arr = ["ABDULLAH SANJRANI","salman", "samad", "sami", "Muhammad", "Faraz", "Muslim"];
+        var option = "";
+        arr.map((op,i)=>{
+         option+=`<option value="${op}" id="${i}" style="border-radius: 5px;"">${op}</option>`
+      });
+        document.getElementById("ArrayDropdown").innerHTML = option;
+
+
+        function remove() {
+            
+            var element =document.getElementById("ArrayDropdown");
+            element.remove(element.selectedIndex) 
+        }
+
+
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
+
+
+

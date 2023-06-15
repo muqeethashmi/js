@@ -1,0 +1,15 @@
+<select id="ddlFruits"></select>
+<hr />
+Text: <input type="text" id="txtText" />
+<input type="button" id="btnAdd" value="Add" onclick="Add()" />
+
+
+
+<script type="text/javascript">
+    function Add() {
+        var ddl = document.getElementById("ddlFruits");
+        var option = document.createElement("OPTION");
+        option.innerHTML = document.getElementById("txtText").value;
+        ddl.options.add(option);
+    }
+</script>
